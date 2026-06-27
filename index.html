@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rent This | Outdoor Gear From Neighbors</title>
+    <meta name="description" content="Rent This helps neighbors rent useful things nearby and earn from items sitting idle at home.">
+    <link rel="icon" href="assets/rent-this-logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Rent This home">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/rent-this-logo.svg" alt="">
+        </span>
+        <span class="brand-name">Rent This</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#browse">Browse</a>
+        <a href="#owners">Earn Money</a>
+        <a href="#create-profile">Create Profile</a>
+      </nav>
+      <a class="header-action" href="#create-profile">List something</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img src="assets/rent-this-hero.png" alt="Useful rental items arranged for pickup on a neighborhood driveway.">
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <div class="hero-brand-lockup" aria-label="Rent This. Borrow. Share. Earn.">
+            <span class="hero-brand-mark" aria-hidden="true"></span>
+            <div class="hero-brand-text">
+              <strong>Rent This</strong>
+              <span>Borrow. Share. Earn.</span>
+            </div>
+          </div>
+          <h1 id="hero-title">Gear for your weekend. Income from your garage.</h1>
+          <p class="hero-copy">Why buy something you only need a couple of times? Rent This helps you borrow useful things from neighbors instead of buying new or paying big-box rental prices.</p>
+          <div class="audience-actions" aria-label="Choose your Rent This path">
+            <a class="audience-card renter-path" href="#browse">
+              <span class="path-label">I need something</span>
+              <strong>Rent what you need, when you need it</strong>
+              <small>Skip the full-price purchase for things you may only use once or twice.</small>
+            </a>
+            <a class="audience-card owner-path" href="#owners">
+              <span class="path-label">I own stuff</span>
+              <strong>Your garage could be earning money</strong>
+              <small>Your garage, attic, and closets can become an easy side hustle.</small>
+            </a>
+          </div>
+          <form class="search-panel" aria-label="Search items for rent">
+            <label>
+              <span>Search</span>
+              <input id="item-search" type="search" placeholder="Generator, sleds, fishing poles..." aria-label="Search for rental items">
+            </label>
+            <label>
+              <span>When</span>
+              <input id="date-input" type="date" value="2026-06-30">
+            </label>
+            <label>
+              <span>Nearby</span>
+              <input type="text" value="Phoenix, AZ" aria-label="Location">
+            </label>
+            <a class="primary-button" href="#browse">Find it</a>
+          </form>
+        </div>
+      </section>
+
+      <section class="metrics-band" aria-label="Marketplace highlights">
+        <div>
+          <strong>$18-$65</strong>
+          <span>sample daily rates</span>
+        </div>
+        <div>
+          <strong>Buy less</strong>
+          <span>rent occasional-use items</span>
+        </div>
+        <div>
+          <strong>Earn more</strong>
+          <span>simple owner side hustle</span>
+        </div>
+        <div>
+          <strong>Trust tools</strong>
+          <span>deposits and photo proof</span>
+        </div>
+      </section>
+
+      <section id="garage-value" class="section garage-section" aria-labelledby="garage-title">
+        <div class="garage-copy">
+          <p class="eyebrow">Owner opportunity</p>
+          <h2 id="garage-title">Your garage could be a $700 / month side hustle.</h2>
+          <p>Most homes already have things neighbors would rather rent than buy. Start with the items sitting on your shelves, set a daily price, and let local demand do the rest.</p>
+        </div>
+        <div class="garage-layout">
+          <div class="garage-map" aria-label="Interactive garage revenue map">
+            <img src="assets/garage-revenue-map.png" alt="Organized garage shelves with useful rentable items.">
+            <button class="garage-pin is-active" type="button" style="--x:48%;--y:66%;" data-garage-item="generator">
+              <span>Generator</span><strong>$35/day</strong>
+            </button>
+            <button class="garage-pin" type="button" style="--x:65%;--y:37%;" data-garage-item="trimmer">
+              <span>Weed trimmer</span><strong>$20/day</strong>
+            </button>
+            <button class="garage-pin" type="button" style="--x:73%;--y:40%;" data-garage-item="pressure-washer">
+              <span>Pressure washer</span><strong>$30/day</strong>
+            </button>
+            <button class="garage-pin" type="button" style="--x:53%;--y:31%;" data-garage-item="canopy">
+              <span>Canopy</span><strong>$24/day</strong>
+            </button>
+            <button class="garage-pin" type="button" style="--x:76%;--y:64%;" data-garage-item="tables">
+              <span>Tables & chairs</span><strong>$28/day</strong>
+            </button>
+            <button class="garage-pin" type="button" style="--x:41%;--y:66%;" data-garage-item="cooler">
+              <span>Cooler</span><strong>$18/day</strong>
+            </button>
+            <button class="garage-pin" type="button" style="--x:84%;--y:26%;" data-garage-item="ladder">
+              <span>Ladder</span><strong>$16/day</strong>
+            </button>
+            <button class="garage-pin" type="button" style="--x:88%;--y:53%;" data-garage-item="sports">
+              <span>Sports gear</span><strong>$22/day</strong>
+            </button>
+          </div>
+          <aside class="garage-panel" aria-live="polite">
+            <span class="mini-label">Estimated owner upside</span>
+            <strong class="garage-total" id="garage-total"><span>$700</span><small>/ month</small></strong>
+            <p class="garage-assumption">Based on 8 common garage items renting a few days per month.</p>
+            <div class="garage-detail">
+              <h3 id="garage-item-title">Generator</h3>
+              <p id="garage-item-detail">A portable generator can be useful for camping, tailgates, events, and short-term backup power.</p>
+              <div class="garage-math">
+                <span id="garage-rate">$35/day</span>
+                <span id="garage-days">4 days/mo</span>
+                <strong id="garage-monthly">$140/mo</strong>
+              </div>
+            </div>
+            <a class="primary-button wide" href="#create-profile">Start listing your stuff</a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section marketplace-section" aria-labelledby="marketplace-title">
+        <div class="section-heading">
+          <p class="eyebrow">Two-sided marketplace</p>
+          <h2 id="marketplace-title">One brand, two clear promises</h2>
+        </div>
+        <div class="marketplace-grid">
+          <article class="marketplace-lane">
+            <span class="lane-kicker">For renters</span>
+            <h3>Why buy something you only need a couple of times?</h3>
+            <p>Find useful items nearby, reserve them for the dates you need, and avoid storing, maintaining, or overpaying for things that mostly sit around.</p>
+            <a href="#browse">Browse items</a>
+          </article>
+          <article class="marketplace-lane">
+            <span class="lane-kicker">For owners</span>
+            <h3>Your unused stuff can become the easiest side hustle.</h3>
+            <p>List the things in your garage, attic, or closet that you do not want to sell but are not using often enough. You set the price, dates, and handoff rules.</p>
+            <a href="#owners">List an item</a>
+          </article>
+          <article class="marketplace-lane trust-lane">
+            <span class="lane-kicker">For both sides</span>
+            <h3>Trust is the product layer that makes the exchange work.</h3>
+            <p>Deposits, photo proof, release acknowledgments, reviews, and manual dispute review keep the early marketplace understandable.</p>
+            <a href="#create-profile">Start listing</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="browse" class="section browse-section">
+        <div class="section-heading">
+          <p class="eyebrow">Browse</p>
+          <h2>Useful things ready around the neighborhood</h2>
+        </div>
+        <div class="browse-layout">
+          <aside class="filters" aria-label="Browse filters">
+            <div class="filter-group">
+              <span class="filter-label">Popular searches</span>
+              <button class="chip is-active" type="button" data-filter="all">All</button>
+              <button class="chip" type="button" data-filter="camping">Camping</button>
+              <button class="chip" type="button" data-filter="water">Water</button>
+              <button class="chip" type="button" data-filter="shade">Shade</button>
+              <button class="chip" type="button" data-filter="sports">Sports</button>
+              <button class="chip" type="button" data-filter="games">Games</button>
+              <button class="chip" type="button" data-filter="power">Power</button>
+              <button class="chip" type="button" data-filter="winter">Winter</button>
+            </div>
+            <div class="filter-group">
+              <span class="filter-label">Distance</span>
+              <input type="range" min="1" max="20" value="8" aria-label="Search distance">
+              <div class="range-row"><span>1 mi</span><span>20 mi</span></div>
+            </div>
+            <div class="policy-note">
+              <strong>Launch boundary</strong>
+              <span>Starting with lower-risk outdoor and household items while legal, liability, and insurance rules are built out.</span>
+            </div>
+          </aside>
+
+          <div class="listing-grid" id="listing-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section booking-section" aria-labelledby="booking-title">
+        <div class="section-heading">
+          <p class="eyebrow">Reserve</p>
+          <h2 id="booking-title">Simple booking math</h2>
+        </div>
+        <div class="booking-tool">
+          <div class="booking-summary">
+            <span class="mini-label">Selected item</span>
+            <h3 id="selected-title">Family camping bundle</h3>
+            <p id="selected-meta">Tent, 4 sleeping bags, lantern, camp chairs</p>
+            <div class="handoff-grid">
+              <label>
+                <span>Pickup</span>
+                <input type="datetime-local" id="pickup-time" value="2026-06-30T16:00">
+              </label>
+              <label>
+                <span>Return</span>
+                <input type="datetime-local" id="return-time" value="2026-07-02T18:00">
+              </label>
+            </div>
+            <label class="check-row">
+              <input type="checkbox" checked>
+              <span>I acknowledge Rent This is a peer-to-peer rental marketplace and agree to the renter release, condition-photo process, and damage authorization.</span>
+            </label>
+          </div>
+          <div class="price-panel">
+            <div class="price-line"><span>Daily rate</span><strong id="daily-rate">$45</strong></div>
+            <div class="price-line"><span>Rental days</span><strong id="rental-days">3</strong></div>
+            <div class="price-line"><span>Damage deposit</span><strong id="deposit">$150</strong></div>
+            <div class="price-line"><span>Platform fee</span><strong id="fee">$14</strong></div>
+            <div class="total-line"><span>Due today</span><strong id="total">$149</strong></div>
+            <button class="primary-button wide" id="reserve-button" type="button">Reserve item</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="owners" class="section owner-section" aria-labelledby="owner-title">
+        <div class="section-heading">
+          <p class="eyebrow">Owners</p>
+          <h2 id="owner-title">There’s money sitting in your garage</h2>
+        </div>
+        <div class="owner-flow">
+          <div class="flow-step">
+            <span>1</span>
+            <h3>Add the item</h3>
+            <p>Photos, replacement value, condition, included accessories, blocked dates, and pickup radius.</p>
+          </div>
+          <div class="flow-step">
+            <span>2</span>
+            <h3>Set the terms</h3>
+            <p>Daily price, deposit, pickup windows, late return rules, and required condition photos.</p>
+          </div>
+          <div class="flow-step">
+            <span>3</span>
+            <h3>Get paid</h3>
+            <p>Approved renters reserve, confirm handoff, return the item, and both sides rate the exchange.</p>
+          </div>
+        </div>
+
+        <form class="listing-form" aria-label="Create a sample listing">
+          <label>
+            <span>Item name</span>
+            <input id="owner-item" type="text" value="Two-person backpacking tent">
+          </label>
+          <label>
+            <span>Daily price</span>
+            <input id="owner-price" type="number" value="28" min="1">
+          </label>
+          <label>
+            <span>Replacement value</span>
+            <input id="owner-value" type="number" value="240" min="1">
+          </label>
+          <output class="listing-preview" id="listing-preview">$28/day with a suggested $72 deposit</output>
+        </form>
+      </section>
+
+      <section id="create-profile" class="section onboarding-section" aria-labelledby="profile-title">
+        <div class="section-heading">
+          <p class="eyebrow">List something</p>
+          <h2 id="profile-title">List your first item</h2>
+        </div>
+        <div class="onboarding-layout">
+          <form class="profile-form" id="profile-form" aria-label="Create a Rent This profile">
+            <div class="form-panel">
+              <div class="form-panel-heading">
+                <span class="step-badge">1</span>
+                <div>
+                  <h3>Your profile</h3>
+                  <p>Owners and renters use one account, with owner tools unlocked when you list your first item.</p>
+                </div>
+              </div>
+              <div class="role-toggle" aria-label="Profile type">
+                <label>
+                  <input type="radio" name="profile-role" value="owner" checked>
+                  <span>Owner</span>
+                </label>
+                <label>
+                  <input type="radio" name="profile-role" value="renter">
+                  <span>Renter</span>
+                </label>
+              </div>
+              <div class="field-grid">
+                <label>
+                  <span>Display name</span>
+                  <input id="profile-name" type="text" value="Taylor W.">
+                </label>
+                <label>
+                  <span>Neighborhood</span>
+                  <input id="profile-area" type="text" value="Arcadia, Phoenix">
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input id="profile-email" type="email" value="taylor@example.com">
+                </label>
+                <label>
+                  <span>Phone</span>
+                  <input id="profile-phone" type="tel" value="(602) 555-0184">
+                </label>
+              </div>
+            </div>
+
+            <div class="form-panel">
+              <div class="form-panel-heading">
+                  <span class="step-badge">2</span>
+                <div>
+                  <h3>Your first item</h3>
+                  <p>Add a real photo, describe what is included, and Rent This will suggest the category for you.</p>
+                </div>
+              </div>
+              <div class="field-grid item-fields">
+                <label>
+                  <span>Item name</span>
+                  <input id="new-item-title" type="text" value="Two-person backpacking tent">
+                </label>
+                <div class="ai-category-card" aria-live="polite">
+                  <span>AI category</span>
+                  <strong id="ai-category">Camping</strong>
+                  <small>Suggested from the item name and description.</small>
+                </div>
+                <label>
+                  <span>Daily price</span>
+                  <input id="new-item-rate" type="number" min="1" value="28">
+                </label>
+                <label>
+                  <span>Replacement value</span>
+                  <input id="new-item-value" type="number" min="1" value="240">
+                </label>
+                <label class="full-field">
+                  <span>Description</span>
+                  <textarea id="new-item-meta" rows="3">Lightweight tent with footprint, stakes, and rainfly. Clean and ready for weekend pickup.</textarea>
+                </label>
+                <label>
+                  <span>Pickup option</span>
+                  <select id="new-item-pickup">
+                    <option>Porch pickup</option>
+                    <option>Public handoff</option>
+                    <option>Flexible window</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Condition</span>
+                  <select id="new-item-condition">
+                    <option>Excellent</option>
+                    <option>Good</option>
+                    <option>Used but solid</option>
+                  </select>
+                </label>
+                <label class="full-field upload-field">
+                  <span>Listing photo</span>
+                  <input id="new-item-photo" type="file" accept="image/*">
+                </label>
+              </div>
+              <label class="check-row owner-check">
+                <input id="owner-terms" type="checkbox" checked>
+                <span>I confirm this is a launch-approved item and can be inspected with pickup and return photos.</span>
+              </label>
+              <button class="primary-button wide" type="submit">Publish listing</button>
+            </div>
+          </form>
+
+          <aside class="profile-preview" aria-live="polite">
+            <div class="profile-card">
+              <div class="avatar" id="profile-avatar">TW</div>
+              <div>
+                <span class="mini-label">Profile preview</span>
+                <h3 id="preview-name">Taylor W.</h3>
+                <p id="preview-area">Arcadia, Phoenix</p>
+              </div>
+            </div>
+            <div class="new-listing-preview">
+              <img id="new-listing-image" src="assets/listing-backpacking-kit.png" alt="Preview of the item being listed">
+              <div>
+                <span class="mini-label">Draft listing</span>
+                <h3 id="preview-item-title">Two-person backpacking tent</h3>
+                <p id="preview-item-meta">Lightweight tent with footprint, stakes, and rainfly. Clean and ready for weekend pickup.</p>
+                <div class="preview-price-row">
+                  <strong id="preview-item-rate">$28/day</strong>
+                  <span id="preview-item-deposit">$72 deposit</span>
+                </div>
+              </div>
+            </div>
+            <div class="publish-status" id="publish-status">Ready to publish a sample listing.</div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="safety" class="section safety-section" aria-labelledby="safety-title">
+        <div class="section-heading">
+          <p class="eyebrow">Why it works</p>
+          <h2 id="safety-title">Renters save money. Owners make money.</h2>
+        </div>
+        <div class="safety-grid">
+          <article>
+            <h3>Use it once? Rent it.</h3>
+            <p>Skip the big purchase for things you only need for a weekend, a party, a project, or one season.</p>
+          </article>
+          <article>
+            <h3>Already own it? Earn from it.</h3>
+            <p>Owners can turn garage, attic, shed, and closet items into income without selling things they still want to keep.</p>
+          </article>
+          <article>
+            <h3>Simple handoffs</h3>
+            <p>Clear pickup windows, return times, condition photos, and deposits make each rental easier for both sides.</p>
+          </article>
+          <article>
+            <h3>Built for neighbors</h3>
+            <p>Start local, share in neighborhood groups, and let owners bring renters in through the communities they already trust.</p>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#top" aria-label="Rent This home">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/rent-this-logo.svg" alt="">
+        </span>
+        <span class="brand-name">Rent This</span>
+      </a>
+      <span>Borrow. Share. Earn.</span>
+    </footer>
+
+    <div class="reservation-modal" id="reservation-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="reservation-title">
+        <button class="modal-close" type="button" aria-label="Close reservation confirmation" data-close-modal>×</button>
+        <p class="eyebrow">Reserved</p>
+        <h2 id="reservation-title">You found it nearby.</h2>
+        <p class="modal-copy" id="reservation-copy">Your item is reserved. Pickup details and owner contact would be sent by text in the full product.</p>
+
+        <div class="sms-preview">
+          <span class="mini-label">Text preview</span>
+          <p id="sms-preview-text">Rent This: Your reservation is confirmed. Pickup details are ready.</p>
+        </div>
+
+        <div class="owner-conversion">
+          <span class="path-label">Have stuff sitting around?</span>
+          <h3>Look around your garage, attic, closets, or shed.</h3>
+          <p>You just rented something you did not want to buy. Someone nearby may need the things already sitting in your garage, attic, closet, or shed. A few common items can add up to roughly $700 / month.</p>
+          <div class="idea-grid" aria-label="Things you could list">
+            <span>Coolers</span>
+            <span>Canopies</span>
+            <span>Generators</span>
+            <span>Party tables</span>
+            <span>Baby gear</span>
+            <span>Sports gear</span>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <a class="primary-button" href="#create-profile" id="modal-list-link">List my stuff</a>
+          <button class="secondary-button" type="button" data-close-modal>Keep browsing</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

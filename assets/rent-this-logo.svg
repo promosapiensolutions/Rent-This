@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 128" role="img" aria-labelledby="title desc">
+  <title id="title">Rent This logo</title>
+  <desc id="desc">A crisp selection-box mark around the word This.</desc>
+  <rect x="12" y="18" width="104" height="92" rx="20" fill="#F7F4EA" stroke="#141414" stroke-width="4"/>
+  <path d="M36 42h56M36 86h56M36 42v17M92 42v17M36 69v17M92 69v17" fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+  <path d="M49 64h30" stroke="#376BFF" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="94" cy="33" r="8" fill="#FF5A3D"/>
+  <text x="151" y="60" fill="#141414" font-family="Inter Tight, Satoshi, Helvetica Neue, Arial, sans-serif" font-size="42" font-weight="950" letter-spacing="-2.4">Rent This</text>
+  <text x="154" y="88" fill="#6B7370" font-family="Inter Tight, Satoshi, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="2.2">BORROW. SHARE. EARN.</text>
+</svg>
